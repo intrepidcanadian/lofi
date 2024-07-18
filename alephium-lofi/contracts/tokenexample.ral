@@ -1,0 +1,68 @@
+// Token Example
+
+import "std/fungible_token_interface"
+
+// https://github.com/alephium/alephium-web3/tree/master/packages/web3/std
+// https://docs.alephium.org/dapps/standards/fungible-tokens
+// Standard interface for fungible tokens
+// @std(id = #0001)
+// @using(methodSelector = false)
+// Interface IFungibleToken {
+//   pub fn getSymbol() -> ByteVec
+//   pub fn getName() -> ByteVec
+//   pub fn getDecimals() -> U256
+//   pub fn getTotalSupply() -> U256
+// }
+
+
+// Token Builder
+
+Contract Intrepid(
+    name: ByteVec,
+    symbol: ByteVec,
+    decimals: U256,
+    supply: U256,
+) implements IFungibleToken {
+
+    // Events
+    Withdraw()
+    Deposit()
+
+    enum ErrorCodes = {
+        Invalid = 1
+        Valid = 0
+    }
+
+    // Error Codes
+
+    pub fn getSymbol() -> ByteVec {
+        return symbol;
+    }
+
+    pub fn getName() -> ByteVec {
+        return name;
+    }
+
+    pub fn getDecimals() -> U256 {
+        return decimals;
+    }
+
+    pub fn getTotalSupply() -> U256 {
+        return supply;
+    }
+
+
+    @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
+    // withdraw function
+    pub fn withdraw() {
+        // takes alph from contract, returns token
+    }
+
+
+    @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
+    // deposit function
+    pub fn deposit() {
+        // takes token and return alph
+    }
+
+}
