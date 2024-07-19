@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import previousIcon from "./icons/previous.svg";
 import nextIcon from "./icons/next.svg";
@@ -13,7 +13,7 @@ import Music from "./Music";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const { currentQuote } = useQuotes();
+  const { currentQuote, secondQuote } = useQuotes();
   const { currentSong, selectRandomSongs } = useSongs();
   const { currentGif, currentGifIndex, selectRandomGif } = useGifs();
   const { volume, renderVolumeControl } = useVolume();
@@ -26,7 +26,17 @@ function App() {
 
   return (
     <div className="App">
-      <div className="gif-container">
+      <div className="documentation-button-container">
+        <button
+          className="documentation-button"
+          onClick={() => {
+            window.open("https://docs.alephium.org/");
+          }}
+        >
+          Developer Documentation
+        </button>
+      </div>
+      <div className="AlephiumGifContainer">
         <img
           className={`transition-gif ${showTransition ? "show" : ""}`}
           src={currentTransitionGif}
@@ -34,11 +44,14 @@ function App() {
         {currentGifIndex !== null && <img className="gifs" src={currentGif} />}
       </div>
       <div className="crt-lines"></div>
-      <div className="vignette"></div>
+      {/* <div className="vignette"></div> */}
       <div className="dark"></div>
       <div className="button-container">
         <div className="text">
           <span>{currentQuote}</span>
+        </div>
+        <div className="text" style={{ fontStyle: "italic" }}>
+          <span>{secondQuote}</span>
         </div>
         <div className="button">
           <button

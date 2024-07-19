@@ -32,18 +32,30 @@
 }
 
 .text {
-  height: 50px;
+  height: 30px;
   width: 100%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
+}
+span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-span {
-  font-family: 'Devin Chavez Font', sans-serif;
-  font-size: 10px;
-  color: white;
+span:hover {
+  background-color: rgba(255, 255, 255, 0.8); 
+  color: #333; 
 }
 
 .pointer {
@@ -69,10 +81,10 @@ span {
 .green-box.active-box{
   opacity: 1;
 }
-
+/* 
 button, select, .pointer {
   cursor: url(images/cursors/pointer.svg), pointer !important;
-}
+} */
 
 .transition-gif {
   position: absolute;
@@ -92,7 +104,7 @@ button, select, .pointer {
 }
 
 .img-btn {
-  width: 35px;
+  width: 80px;
   height: 80px;
 }
 
@@ -117,7 +129,7 @@ button, select, .pointer {
   background-size: 7px auto;
   mix-blend-mode: overlay;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.1;
   animation: moveDownAnimation 150s linear infinite;
 }
 
@@ -144,4 +156,33 @@ button, select, .pointer {
   left: 0;
   z-index: 1;
   transition: 1s;
+}
+
+.documentation-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333; 
+  border: 2px solid #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 8px; 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.documentation-button:hover {
+  background-color: #333; /* Dark gray background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.documentation-button:active {
+  background-color: #555; /* Slightly darker gray when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+  transform: translateY(2px); /* Slightly move down when clicked */
 }

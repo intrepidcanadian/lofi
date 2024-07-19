@@ -1,3 +1,13 @@
-<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 1H3V8H4V7H5V6H6V5H7V4H6V3H5V2H4V1Z" fill="white"/>
+</svg> -->
+
+<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="9" y2="9" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7f50" />
+      <stop offset="1" stop-color="#1e90ff" />
+    </linearGradient>
+  </defs>
+  <path d="M2 1L7 4.5L2 8V1Z" fill="white"/>
 </svg>

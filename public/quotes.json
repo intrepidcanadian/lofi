@@ -1,6 +1,24 @@
 {
-    "quotes":[
-        "Alephium leverages UTXO to have battle-tested bitcoin security while retaining the expressiveness of Ethereum through contracts",
-        "Proof-of-Work allows Alephium to be light-weight for scalability and future-proof"
-    ]
+  "quotes": [
+    {
+      "quote": "Alephium is built on stateful UTXO and DAG data structure",
+      "quote2": "This combines battle-tested token security, smart contract expressiveness and efficient/practical sharding"
+    },
+    {
+      "quote": "Alephium is light-weight for future scalability",
+      "quote2": "PoLW takes into consideration the future energy and hardware requirements"
+    },
+    {
+      "quote": "Simple Dapp Tutorial for Developers",
+      "quote2": "npx @alephium/cli@latest init alephium-nextjs-tutorial --template nextjs"
+    },
+    {
+      "quote": "Devnet setup. git clone https://github.com/alephium/alephium-stack",
+      "quote2": "make start-devnet. Docker compose up a devnet for development on daemon"
+    },
+    {
+      "quote": "Compiling ralph contracts is easy using the Alephium CLI. Get the core SDK at npm i @alephium/web3",
+      "quote2": "npx cli compile"
+    }
+  ]
 }
