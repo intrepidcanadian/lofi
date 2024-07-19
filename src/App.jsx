@@ -33,7 +33,7 @@ function App() {
             window.open("https://docs.alephium.org/");
           }}
         >
-          Developer Documentation
+          Developer Documentation for Alephium
         </button>
       </div>
       <div className="AlephiumGifContainer">
@@ -46,13 +46,13 @@ function App() {
       <div className="crt-lines"></div>
       {/* <div className="vignette"></div> */}
       <div className="dark"></div>
-      <div className="button-container">
-        <div className="text">
+      <div className="text">
           <span>{currentQuote}</span>
         </div>
         <div className="text" style={{ fontStyle: "italic" }}>
           <span>{secondQuote}</span>
         </div>
+      <div className="button-container">
         <div className="button">
           <button
             className="change-gif-btn previous-btn"
